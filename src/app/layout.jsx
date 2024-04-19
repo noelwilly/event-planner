@@ -13,7 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+<<<<<<< HEAD
         <nav>
+=======
+        <nav className="flex gap-4">
+>>>>>>> f61aaed47ee4cf1a342d1b0b67ef347113e84267
           <Link href="/">Hjem</Link>
           <Link href="/add-event">Tilføj event</Link>
         </nav>
