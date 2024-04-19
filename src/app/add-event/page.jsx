@@ -8,13 +8,11 @@ export default async function AddEventPage() {
       Prefer: "return=representation",
       "Content-Type": "application/json",
     };
-
     let bodyContent = JSON.stringify({
       name: formData.get("name"),
       when: formData.get("when"),
       description: formData.get("description"),
     });
-
     let response = await fetch(
       "https://uwrwptibotlxlvcdeicv.supabase.co/rest/v1/events",
       {
@@ -23,9 +21,7 @@ export default async function AddEventPage() {
         headers: headersList,
       }
     );
-
     let data = await response.json();
-    //console.log(data);
     const id = data[0].id;
     redirect("/events/" + id);
   }
